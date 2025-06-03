@@ -1,0 +1,41 @@
+$bg: black;
+$text: white;
+$padding-bottom: 1rem;
+$shadow: rgba(0, 0, 0, 0.1);
+
+.footer {
+  background-color: $bg;
+  color: $text;
+  padding-bottom: $padding-bottom;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -4px 8px $shadow;
+  margin-top: 20px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px $shadow;
+}
+
+footer img {
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  footer img {
+    height: 80px;
+    width: 80px;
+  }
+}

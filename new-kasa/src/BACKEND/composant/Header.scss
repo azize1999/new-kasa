@@ -1,0 +1,64 @@
+$primary-color: #000000;
+$logo-height: 150px;
+$logo-width: 150px;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-color;
+  padding: 0 50px;
+
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    img {
+      height: $logo-height;
+      width: $logo-width;
+    }
+  }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 4rem;
+        font-size: 24px;
+       font-family: sans-serif;
+
+      li {
+        a {
+          color: $primary-color;
+          text-decoration: none;
+          font-family: Montserrat, sans-serif;
+
+          &.active {
+            text-decoration: underline;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+
+@media (max-width: 768px) {
+
+
+    .logo img {
+      width: 100px;
+    }
+
+    .navbar ul {
+      flex-direction: row;
+
+      align-items: center;
+
+    
+    }
+  }
+
