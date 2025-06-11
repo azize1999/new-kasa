@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.scss';
-import Home from '../../assets/images/accueil.png';
+import accueilImage from '../../assets/images/accueil.png';
+import data from '../data.json';
 
-const Banner = () => {
+const Banner = ({ title, image }) => {
   return (
     <div className="banner">
-      <img src={Home} alt="accueil" className="banner-image" />
+      <img src={image} alt="accueil" className="banner-image" />
       <div className="banner-text">
-        <h1>Chez vous, partout et ailleurs</h1>
-       
+        <h1>{title}</h1>
       </div>
     </div>
   );
 };
 
-export default Banner;
+const Carte = ({ carte }) => {
+  return (
+    <div className="carte">
+      <img src={carte.cover} alt={carte.title} />
+      <h2>{carte.title}</h2>
+    </div>
+  );
+};
+
+const ListeCartes = ({ cartes }) => {
+  return (
+    <div className="liste-cartes">
+      {cartes.map((carte) => (
+        <Link to={`/carte/${carte.id}`} key={carte.id}>
+          <Carte carte={carte} />
+        </Link>
+      ))}
+    </div>
+  );
+};
+
+const Home = () => {
+  const [cartes] = useState(data); 
+
+  return (
+    <>
+      <Banner title="Chez vous, partout et ailleurs" image={accueilImage} />
+      <ListeCartes cartes={cartes} />
+    </>
+  );
+};
+
+export default Home;

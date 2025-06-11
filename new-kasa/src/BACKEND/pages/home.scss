@@ -1,41 +1,107 @@
-.banner {
+.carte {
   position: relative;
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 4%;
-  
-  .banner-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 350px;
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-     filter: brightness(0.3);
   }
-  
-  .banner-text {
+
+  h2 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 30px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: white;
-    text-align: center;
-    z-index: 1;
-    padding: 1rem;
+    background: linear-gradient(to top, rgb(0 0 0 / 45%), rgba(0, 0, 0, 0));
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+}
+.liste-cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 50px 60px;
+  padding: 50px;
+  background: #f7f7f7;
+  border-radius: 25px;
+  margin: 40px auto;
+  max-width: 85%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background: transparent;
+    margin: 20px auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* Styles pour la bannière (inchangés) */
+.banner {
+  position: relative;
+  height: 223px;
+  margin: 20px auto;
+  max-width: 85%;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 111px;
+    margin: 10px auto;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+  }
+
+  &-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 
     h1 {
-      margin: 0;
-      font-family: sans-serif;
+      color: white;
       font-size: 48px;
       font-weight: 500;
-      font-size: 3vw;
-    }
+      text-align: center;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        text-align: left;
+        width: 100%;
+      }
     }
   }
 }

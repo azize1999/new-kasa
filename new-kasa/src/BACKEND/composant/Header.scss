@@ -12,20 +12,15 @@ $logo-width: 150px;
   .logo{
     display: flex;
     align-items: center;
+            padding-top: 0;
   }
-  .logo {
-    img {
-      height: $logo-height;
-      width: $logo-width;
-    }
-  }
+ 
 
     ul {
       list-style-type: none;
       display: flex;
       gap: 4rem;
         font-size: 24px;
-       font-family: sans-serif;
 
       li {
         a {
@@ -48,17 +43,28 @@ $logo-width: 150px;
 
 @media (max-width: 768px) {
 
+    .header {
+        padding: 0px;
+    }
 
+    .header ul{
+    font-size: 15px;
+ }
+    .header .logo {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
     .logo img {
       width: 100px;
+      padding: 0px;
     }
 
     .navbar ul {
       flex-direction: row;
-
+      padding-left: 0px;
       align-items: center;
-
-    
+      gap: 1rem;
+    padding-top: 20%;
     }
   }
 
