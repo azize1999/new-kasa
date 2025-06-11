@@ -4,11 +4,11 @@ import './Home.scss';
 import accueilImage from '../../assets/images/accueil.png';
 import data from '../data.json';
 
-const Banner = ({ title, image }) => {
+const Accueilphoto = ({ title, image }) => {
   return (
-    <div className="banner">
-      <img src={image} alt="accueil" className="banner-image" />
-      <div className="banner-text">
+    <div className="Accueilphoto">
+      <img src={image} alt="Accueil" className="Accueilphoto-image" />
+      <div className="Accueilphoto-text">
         <h1>{title}</h1>
       </div>
     </div>
@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <Banner title="Chez vous, partout et ailleurs" image={accueilImage} />
+      <Accueilphoto title="Chez vous, partout et ailleurs" image={accueilImage} />
       <ListeCartes cartes={cartes} />
     </>
   );
