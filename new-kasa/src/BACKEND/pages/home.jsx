@@ -14,7 +14,7 @@ const Banner = ({ title, image }) => {
     </div>
   );
 };
-
+ 
 const Carte = ({ carte }) => {
   return (
     <div className="carte">
