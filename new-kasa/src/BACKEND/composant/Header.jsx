@@ -11,7 +11,7 @@ function Header() {
       <div className="logo">
         <img src={Logo} alt="Logo de la page d'accueil" />
       </div>
-      <nav className="navbar">
+      <nav className="about">
         <ul>
           {[
             { path: '/', label: 'Accueil' },
