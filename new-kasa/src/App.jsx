@@ -5,6 +5,7 @@ import Home from './BACKEND/pages/home.jsx';
 import About from './BACKEND/pages/about.jsx';
 import Error from './BACKEND/pages/Error.jsx';
 import AboutPhoto from './assets/images/about.png';
+import Details from './BACKEND/pages/Details.jsx';
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About image={AboutPhoto} />} />
+         <Route path="/carte/:id" element={<Details />} />
          <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
