@@ -2,20 +2,18 @@
   max-width: 100%;
   margin: 50px auto;
   padding: 20px;
-  background-color: #f8f8f8;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding-bottom: 0;
 
   &__title {
-    margin: 20px 0 0;
+    margin: 20px 0 0 5%;
     color: #ff6060;
     font-weight: 500;
     font-size: 2.2rem;
     font-family: emoji;
     display: flex;
     margin-top: 2%;
-    margin-left: 5%;
   }
 
   &__description {
@@ -27,15 +25,14 @@
     position: relative;
     width: 90%;
     margin: 0 auto;
-    height: 500px; // Ajouté pour définir une hauteur fixe pour le conteneur
-    border-radius: 15px;
-    overflow: hidden; // Pour cacher tout débordement
+    height: 500px;
+    overflow: hidden;
 
     .details__cover {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 25px
     }
 
     .arrow {
@@ -49,7 +46,7 @@
       cursor: pointer;
       z-index: 10;
       border: 0;
-
+      outline: none;
 
       &.left {
         left: 2%;
@@ -60,9 +57,180 @@
       }
     }
   }
+
+  &__header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -10px;
+  }
 }
 
 p {
   display: flex;
   margin-left: 5%;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Montserrat';
+  color: black;
+  font-weight: 600;
 }
+
+.labels {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 5%;
+
+  .label {
+    background-color: #ff6060;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 4px 6px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.etoile {
+  display: flex;
+  gap: 8px;
+  font-size: 22px;
+  flex-direction: row-reverse;
+  margin-right: 10%;
+
+  .fa-star {
+    color: lightgray;
+
+    &.filled {
+      color: #ff6060;
+    }
+  }
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  padding-bottom: 1%;
+
+  p {
+    margin: 0 10px 0 0;
+    color: #ff6060;
+    font-family: emoji;
+    font-size: 14px;
+  }
+
+  .host-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.score {
+  margin-right: 3%;
+  display: grid;
+  gap: 25%;
+  margin-top: 2%;
+  margin-right: 4%;
+}
+
+.double-collapses {
+  display: flex;
+  width: 92%;
+  margin-left: 4%;
+}
+.collapse {
+  width:50% ;
+}
+
+@media (max-width: 768px) {
+  .details {
+    margin: 20px auto;
+    padding: 10px;
+
+    &__title {
+      font-size: 1.6rem;
+      margin-top: 10px;
+      margin-left: 5%;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__cover-wrapper {
+      height: 300px;
+
+      .arrow {
+        font-size: 3rem;
+      }
+    }
+
+    &__header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .etoile {
+    font-size: 18px;
+    margin-right: 0;
+    margin-left: 5%;
+  }
+
+  .Owner {
+    margin-right:0;
+    margin-top: 1px;
+
+    p {
+      font-size: 16px;
+    }
+
+    .host-picture {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .score {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    order: 1; /* place le score après les autres éléments */
+    margin-top: 1rem;
+  }
+
+  .details__info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details__header-row {
+    display: contents;
+  }
+
+  .double-collapses {
+ display: block;
+}
+.collapse {
+  width:100% ;
+}
+}
+
+
