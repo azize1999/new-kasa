@@ -17,6 +17,7 @@ const Owner = (props) => (
   </div>
 );
 
+
 // Composant Rating
 const Rating = ({ rating }) => (
   <div className="etoile">
