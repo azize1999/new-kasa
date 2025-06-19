@@ -29,7 +29,7 @@ const Rating = ({ rating }) => (
     ))}
   </div>
 );
-
+ 
 // Composant Tags
 const Tags = ({ tags }) => (
   <div className="labels">
