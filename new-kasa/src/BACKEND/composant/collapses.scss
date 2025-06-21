@@ -40,6 +40,10 @@
     font-family: sans-serif
   }}
 
-  .aboutr-collapses{
-    width: 85%;
+  .about-collapses{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding-bottom: 2%;
   }
+  

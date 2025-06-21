@@ -6,7 +6,7 @@ const Collapse = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="collapse">
+    <div id="collapse" className="collapse">
       <div
         className="collapse-header"
         onClick={() => setIsOpen((prev) => !prev)}

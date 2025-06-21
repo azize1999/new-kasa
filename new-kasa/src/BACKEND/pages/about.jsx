@@ -11,7 +11,7 @@ const Navbar = ({ title, image }) => {
         <h1>{title}</h1>
       </div>
 
-      <div className="aboutr-collapses">
+      <div id ="about-collapses"className="about-collapses">
         {informations.map((item, index) => (
           <Collapses
             key={index}
