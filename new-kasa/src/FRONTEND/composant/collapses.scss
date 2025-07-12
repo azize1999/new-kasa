@@ -38,6 +38,7 @@
     background-color: white;
     color: #333;
     font-family: sans-serif
+    
   }}
 
   .about-collapses{
@@ -47,3 +48,9 @@
     padding-bottom: 2%;
   }
   
+  ul {
+    list-style: none;
+    display: grid;
+    justify-items: start;
+    padding-left: 0;
+  }

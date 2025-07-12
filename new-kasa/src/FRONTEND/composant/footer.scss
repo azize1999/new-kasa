@@ -34,10 +34,11 @@ footer img {
 @media (max-width: 480px) {
   .footer p {
     font-size: 0.9rem;
+    display: grid;
   }
 
   footer img {
-    height: 80px;
+    height: 70px;
     width: 80px;
   }
 }

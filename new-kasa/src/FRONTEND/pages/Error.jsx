@@ -21,14 +21,17 @@ const Error = () => {
         </header>
         <article>
           <p className="error__message">
-            Oups! La page que vous recherchez n'existe pas.
+            Oups! La page que &nbsp;
+
+            <span> vous demandez n'existe pas.</span>
           </p>
+          
         </article>
-        <footer>
+        
           <Link to="/" className="error__link">
             Retourner sur la page d'accueil
           </Link>
-        </footer>
+       
       </section>
     );
   }
